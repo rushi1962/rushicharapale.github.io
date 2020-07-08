@@ -383,7 +383,7 @@ section{
 </nav>
 <section>
   
-	<div class="welcome"><a name="home"></a>Welcome to RC's page!</div>
+	<div ><a name="home"></a><h4 class="welcome">Welcome to RC's page_</h4></div>
 		</div>
 		<div style="font-size:40px; color:rgba(254,249,184); text-align:center; padding:10px; margin-top:16px;">Click on the menu options to surf on this website!!!</div>
 
@@ -407,4 +407,138 @@ section{
 	<div class="intro_header" style=" background-color:rgba(249,68,154);color:white;border-radius:10px;box-shadow:1px 2px 10px 5px rgba(46,33,37); margin:10px;">Thank you for visiting my website!</div>
 	
   </body>
+  <script
+  src="jquery.js"></script>
+  <script>
+    var down=1;
+    var count=0;
+    var id1=0,id2=0;
+    function fn2(){
+        if(count<6)
+        {
+            if($(".welcome").html()=="Welcome to RC's page_")
+            {
+                $(".welcome").html("Welcome to RC's page"); 
+            }
+            else
+            $(".welcome").html("Welcome to RC's page_");
+            count++;
+        }
+        else
+        {
+            count=0;
+            window.clearInterval(id2);
+            id1=window.setInterval(fn1,200);
+        }    
+    }
+    function fn1()
+    {
+        if(down==1)
+        {
+            if($(".welcome").html()=="Welcome to RC's page_")
+            {
+                $(".welcome").html("Welcome to RC's pag_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's pag_")
+            {
+                $(".welcome").html("Welcome to RC's pa_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's pa_")
+            {
+                $(".welcome").html("Welcome to RC's p_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's p_")
+            {
+                $(".welcome").html("Welcome to RC's w_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's w_")
+            {
+                $(".welcome").html("Welcome to RC's we_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's we_")
+            {
+                $(".welcome").html("Welcome to RC's web_");
+               
+            }
+			else if($(".welcome").html()=="Welcome to RC's web_")
+            {
+                $(".welcome").html("Welcome to RC's web _");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's web _")
+            {
+                $(".welcome").html("Welcome to RC's web s_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's web s_")
+            {
+                $(".welcome").html("Welcome to RC's web si_");
+            }
+			else if($(".welcome").html()=="Welcome to RC's web si_")
+            {
+                $(".welcome").html("Welcome to RC's web sit_");
+            }
+			else if($(".welcome").html()=="Welcome to RC's web sit_")
+            {
+                $(".welcome").html("Welcome to RC's web site_");
+				 down=0;
+            }
+        }
+        else if(down==0)
+        {
+            if($(".welcome").html()=="Welcome to RC's web site_")
+            {
+                $(".welcome").html("Welcome to RC's web sit_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's web sit_")
+            {
+                $(".welcome").html("Welcome to RC's web si_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's web si_")
+            {
+                $(".welcome").html("Welcome to RC's web s_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's web s_")
+            {
+                $(".welcome").html("Welcome to RC's web _");
+            }
+            else if($(".welcome").html()=="Welcome to RC's web _")
+            {
+                $(".welcome").html("Welcome to RC's web_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's web_")
+            {
+                $(".welcome").html("Welcome to RC's we_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's we_")
+            {
+                $(".welcome").html("Welcome to RC's w_");
+               
+            }
+			 else if($(".welcome").html()=="Welcome to RC's w_")
+            {
+                $(".welcome").html("Welcome to RC's p_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's p_")
+            {
+                $(".welcome").html("Welcome to RC's pa_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's pa_")
+            {
+                $(".welcome").html("Welcome to RC's pag_");
+            }
+			else if($(".welcome").html()=="Welcome to RC's pag_")
+            {
+                $(".welcome").html("Welcome to RC's page_");
+				down=1;
+                window.clearInterval(id1);
+                id2=window.setInterval(fn2,200);
+            }
+			
+            
+        }
+       
+    }
+    id1=window.setInterval(fn1,200);
+ 
+</script>
+  
 </html>
