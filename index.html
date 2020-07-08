@@ -412,7 +412,8 @@ section{
   <script
   src="jquery.js"></script>
   <script>
-    var down=1;
+    $(document).ready(function(){
+		var down=1;
     var count=0;
     var id1=0,id2=0;
     function fn2(){
@@ -536,6 +537,7 @@ section{
 	
     id1=window.setInterval(fn1,200);
  
+	});
 </script>
   
 </html>
