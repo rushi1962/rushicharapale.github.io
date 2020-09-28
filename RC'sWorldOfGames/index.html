@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+ 
+    <meta charset="utf-8">
+    <title>RC's world of games!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <style>
+	
+	body{
+	background-color:rgba(0,0,0);
+	//animation:back 0.1s forwards 1s linear;
+}
+
+.ball{
+	width:0px;
+	padding:5px 0;
+	line-height:0;
+	position: absolute;
+  left: 48%;
+  top: 10%;
+	background:rgba(243,243,243);
+	border-radius:5px;
+	
+	
+	animation:produce 0.2s both 1 linear,
+			  hop 1s 0.2s forwards 1 cubic-bezier(1,.01,.28,1),
+			  spread 0.1s 1s forwards linear;
+	
+}
+
+.imagebox
+{
+	width:670px;
+	height:416px;
+	border-radius:20px;
+	padding:10px;
+	float:left;
+	margin-top:16px;
+	margin-left:16px;
+	background-image:url('web3.jpg');
+	opacity:0;
+	animation:disimg 1.2s  forwards 1.2s linear;
+	
+}
+.intro_header{
+	font-size:60px;
+	padding:5px;
+	text-align:center;
+	color:#f2f2f2;
+	opacity:0;
+	animation:dis 1.2s  forwards 1.2s linear;
+}
+.intro{
+color:#f2f2f2;
+font-size:25px;
+	margin:32px auto;
+	padding:10px;
+	text-align:center;
+	opacity:0;
+	animation:dis 1.2s  forwards 1.2s linear;
+}
+.myimagebox
+{
+	width:250px;
+	height:250px;
+	border-radius:125px;
+	
+background:url(myphoto.jpg);
+	margin:50px auto;
+	box-shadow:1px 2px 10px 5px rgba(243,243,243);
+	
+}
+.myimagebox:hover{
+animation: flip 0.7s ease-in forwards;
+}
+.myWorkBox
+{
+	width:250px;
+	height:170px;
+	border-radius:20px;
+	
+	
+	margin:50px auto;
+	box-shadow:1px 2px 10px 5px rgba(243,243,243);
+}
+.myWorkBoxContainer{
+	display:flex;
+	
+	//justify-content:space-between;
+}
+.flipcard{
+background-color:rgba(243,243,243);
+height: 100%;
+width:230px;
+font-size:35px;
+color:black;
+text-align:center;
+padding:5px;
+border-radius:25px;
+margin:32px auto;
+background-color:rgba(254,249,184);
+transform:rotateX(0deg);
+//box-shadow:1px 2px 10px 5px white;
+}
+.flipcard:hover{
+animation:flip_card 0.5s  forwards linear;
+}
+
+.welcome{
+font-size:60px;
+color:rgba(254,255,196,100);
+}
+.welcome_para{
+font-size:40px; 
+color:white;
+ text-align:center;
+ padding:10px; 
+ margin-top:16px;
+}
+nav{
+
+  box-sizing: border-box;
+  background: rgba(243,243,243);
+ // position:fixed;
+  height: 80px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius:5px;
+  //box-shadow:1px 2px 10px 5px white;
+  opacity:0;
+  animation:dis 0.8s  forwards 1s linear;
+}
+label.logo{
+	text-decoration: none;
+  color: #2c3e50;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  opacity:0;
+  animation:dis 1.2s  forwards 1.2s linear;
+}
+nav ul{
+
+margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ list-style: none;
+ 
+  float: right;
+  margin-right: 60px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+  opacity:0;
+  animation:dis 1.2s  forwards 1.2s linear;
+}
+nav ul li a{
+	text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  /* text-transform: uppercase; */
+  font-family: 'Poppins', sans-serif;
+}
+a.active,a:hover{
+  background: rgba(192,192,192,1);
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+@media (max-width: 952px){
+.ball{
+	
+  left: 48%;
+  top: 10%;
+	background:white;
+	border-radius:5px;
+	
+	
+	animation:produce 0.2s both 1 linear,
+			  hop 1s 0.2s forwards 1 cubic-bezier(1,.01,.28,1),
+			  spread 0.1s 1s forwards linear;
+	
+}
+  label.logo{
+    font-size: 27px;
+    padding-left: 10px;
+  }
+  
+  nav ul li a{
+    font-size: 16px;
+	
+  }
+ 
+}
+@media (max-width: 858px){
+	.ball{
+	
+  left: 40%;
+  top: 10%;
+	background:white;
+	border-radius:5px;
+	
+	
+	animation:produce 0.2s both 1 linear,
+			  hop 1s 0.2s forwards 1 cubic-bezier(1,.01,.28,1),
+			  spread 0.1s 1s forwards linear;
+	
+}
+	label.logo{
+    font-size: 20px;
+    padding-left: 10px;
+	
+  }
+ .myWorkBoxContainer{
+	display:inline;
+	
+	//justify-content:space-between;
+} 
+  .checkbtn{
+    display: block;
+    margin-right: 40px;
+	
+  }
+  ul{
+   position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(243,243,243);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background:rgba(192,192,192,1);
+    color:rgba(0,0,0);
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+ 
+}
+
+section{
+  background: url(https://images.pexels.com/photos/3977908/pexels-photo-3977908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+  background-size: 100% 100%;
+  height: calc(100vh - 80px);
+ padding:20px;
+  margin-top:16px;
+  border-radius:20px;
+  
+}
+@keyframes dis{
+	0%{opacity:0}
+	
+	100%{opacity:1}
+}
+@keyframes disimg{
+	0%{opacity:0}
+	
+	100%{opacity:0.6}
+}
+@keyframes produce{
+	0%{
+		width:0px;
+	padding:5px 0;
+	line-height:0;
+	background:rgba(243,243,243);
+	border-radius:5px;
+	position: absolute;
+  
+	
+	
+	}
+	50%{
+		width:40px;
+	padding:20px 0;
+	line-height:0;
+	background:rgba(243,243,243);
+	border-radius:20px;
+	position: absolute;
+  
+	
+	}
+	100%{
+		width:80px;
+	padding:40px 0;
+	line-height:0;
+	background:rgbargba(243,243,243);
+	border-radius:40px;
+	position: absolute;
+  
+	
+	
+	}
+}
+@keyframes hop{
+	0%{
+		transform:translateY(0px)
+		
+	
+	}
+	50%{
+		transform:translateY(400px)
+		
+	
+	}
+	100%{
+		transform:translateY(-90px)
+		
+	
+	}
+}
+@keyframes spread{
+	from{width:80px;
+	padding:40px 0;
+	line-height:0;
+	background:rgba(243,243,243);
+	border-radius:40px;
+	
+  
+	}
+	to{
+		width:100%;
+		height:90px;
+		background:rgba(243,243,243);
+		border-radius:10px;
+		
+		position:fixed;
+		 left: 10%;
+		top: 10%;
+		visibility:hidden;
+	}
+}
+
+@keyframes back{
+	from{background-color:rgba(249,68,154);
+	}
+	to{background:rgba(21,238,205);
+	
+	
+	color:black;
+	}
+}
+@keyframes flip{
+0%{transform:rotateY(0deg);}
+100%{transform:rotateY(360deg);}
+}
+@keyframes flip_card{
+0%{transform:rotateX(180deg);}
+100%{transform:rotateX(360deg);}
+}
+
+	</style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+ <div class="ball"></div>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">It's RC's world of games!</label>
+      <ul>
+<li><a class="active" href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#fielde">field of experties</a></li>
+<li><a href="#work">My work</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+</nav>
+<section>
+  
+	<div ><a name="home"></a><div class="welcome">Welcome to RC's page_</div></div>
+		</div>
+		<!<div style="font-size:40px; color:rgba(0,0,0); text-align:center; padding:10px; margin-top:16px;"!><!Click on the menu options to surf on this website!><!!</div!>
+
+	</section>
+	
+	<div class="intro"><h1>Hello!</h1><p>My name is Rushikesh Charapale and I'm a video game developer as well as a 3D artist. Surf through this page to see my skills & artworks!</p></div>
+	<div class="intro_header"><a name="about">About me</a></div>
+	<div class="myimagebox"></div>
+	<div class="intro">I'm persuing the bachelor degree in Electronics and telecommunication engineering in Pune Institute of Computer Technology, Pune. I'm a Game developer, good C# programmer(UnityEngine namespace) and a low poly 3D artist. I am the former member of PICT Robotics team. I had been Project manager, mechanical designer, market researcher in PICT Robotics team(2019,2020). You can see our team performances in ABU Robocon competition 2019 on our website. The link is down below:<br><a href="https://pictrobotics.com/">PICT Robotics</a><br>You can have a look at my work and skills!</div>
+	<div class="intro_header"><a name="fielde">My field of experties</a></div>
+	<div class="flipcard">Unity Game Engine</div>
+	<div class="flipcard">C#(namespace: UnityEngine)</div>
+	<div class="flipcard">Blender</div>
+	<div class="intro">Other:- C,C++,Core JAVA,Basic python,Gimp,SFXR,Solid works</div>
+	<div class="intro_header" ><a name="work">A glance at my work:</a></div>
+	
+	<div class="myWorkBoxContainer">
+	
+	<div  class="myWorkBox"style="background:url(viking.jpg);background-size:100%;"></div>
+	<div class="myWorkBox"style="background:url(wolf.jpg); background-size:100%;"></div>
+	<div  class="myWorkBox"style="background:url(car.jpg); background-size:100%;"></div>
+	<div  class="myWorkBox"style="background:url(hero.jpg); background-size:100%;"></div>
+	</div>
+	<iframe width="440" height="247" src="https://www.youtube.com/embed/Dq32jGHDN5Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+	<iframe width="440" height="247" src="https://www.youtube.com/embed/Xso8GP8BLrM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="440" height="247" src="https://www.youtube.com/embed/Z6oosHvh4cM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div style="color:#f2f2f2;font-size:20px;margin:32px auto;padding:10px;text-align:center;opacity:0;animation:dis 1.2s  forwards 1.2s linear;"><a href="C:\Users\Admin\Desktop\html&css\experiments\portfolio.html">Visit my portfolio</a></div>
+	<div class="intro_header" > <a name="contact">Contact me:</a></div>
+	
+	<div style="color:#f2f2f2;font-size:20px;margin:32px auto;padding:10px;text-align:center;opacity:0;animation:dis 1.2s  forwards 1.2s linear;">E-mail: rushikeshcharapale22@gmail.com<br>mobile: +91 9881649292<br><a href="https://www.linkedin.com/in/rushikesh-charapale-389288178">View my LinkedIn profile</a></div>
+	
+	<div class="intro_header" style=" background-color:black;color:white;border-radius:10px;box-shadow:1px 2px 10px 5px rgba(46,33,37); margin:10px;">Thank you for visiting my website!</div>
+	
+  </body>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+		var down=1;
+    var count=0;
+    var id1=0,id2=0;
+    function fn2(){
+        if(count<6)
+        {
+            if($(".welcome").html()=="Welcome to RC's page_")
+            {
+                $(".welcome").html("Welcome to RC's page"); 
+            }
+            else
+            $(".welcome").html("Welcome to RC's page_");
+            count++;
+        }
+        else
+        {
+            count=0;
+            window.clearInterval(id2);
+            id1=window.setInterval(fn1,200);
+        }    
+    }
+    function fn1()
+    {
+        if(down==1)
+        {
+            if($(".welcome").html()=="Welcome to RC's page_")
+            {
+                $(".welcome").html("Welcome to RC's pag_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's pag_")
+            {
+                $(".welcome").html("Welcome to RC's pa_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's pa_")
+            {
+                $(".welcome").html("Welcome to RC's p_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's p_")
+            {
+                $(".welcome").html("Welcome to RC's w_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's w_")
+            {
+                $(".welcome").html("Welcome to RC's we_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's we_")
+            {
+                $(".welcome").html("Welcome to RC's web_");
+               
+            }
+			
+			 else if($(".welcome").html()=="Welcome to RC's web_")
+            {
+                $(".welcome").html("Welcome to RC's webs_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's webs_")
+            {
+                $(".welcome").html("Welcome to RC's websi_");
+            }
+			else if($(".welcome").html()=="Welcome to RC's websi_")
+            {
+                $(".welcome").html("Welcome to RC's websit_");
+            }
+			else if($(".welcome").html()=="Welcome to RC's websit_")
+            {
+                $(".welcome").html("Welcome to RC's website_");
+				 down=0;
+            }
+        }
+        else if(down==0)
+        {
+            if($(".welcome").html()=="Welcome to RC's website_")
+            {
+                $(".welcome").html("Welcome to RC's websit_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's websit_")
+            {
+                $(".welcome").html("Welcome to RC's websi_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's websi_")
+            {
+                $(".welcome").html("Welcome to RC's webs_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's webs_")
+            {
+                $(".welcome").html("Welcome to RC's web_");
+            }
+           
+            else if($(".welcome").html()=="Welcome to RC's web_")
+            {
+                $(".welcome").html("Welcome to RC's we_");
+            }
+            else if($(".welcome").html()=="Welcome to RC's we_")
+            {
+                $(".welcome").html("Welcome to RC's w_");
+               
+            }
+			 else if($(".welcome").html()=="Welcome to RC's w_")
+            {
+                $(".welcome").html("Welcome to RC's p_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's p_")
+            {
+                $(".welcome").html("Welcome to RC's pa_");
+            }
+			 else if($(".welcome").html()=="Welcome to RC's pa_")
+            {
+                $(".welcome").html("Welcome to RC's pag_");
+            }
+			else if($(".welcome").html()=="Welcome to RC's pag_")
+            {
+                $(".welcome").html("Welcome to RC's page_");
+				down=1;
+                window.clearInterval(id1);
+                id2=window.setInterval(fn2,200);
+            }
+			
+            
+        }
+       
+    }
+	
+    id1=window.setInterval(fn1,200);
+ 
+	});
+</script>
+  
+</html>
